@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML fayl UTF-8 kodlash bilan yozilganini bildiradi -->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF"
+    tools:context=".MainActivity">
+    <!--
+        📦 CoordinatorLayout — barcha view’larni ichiga oluvchi konteyner
+        - `match_parent` → ekran bo‘ylab to‘liq cho‘ziladi
+        - `tools:context` → dizayn preview’da MainActivity bilan bog‘lanadi
+    -->
+
+    <!-- 📌 Bu yerga fragmentlar joylashtiriladi -->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="70dp" />
+    <!--
+        Fragment’lar shu konteyner ichida ko‘rsatiladi
+        Pastki FAB tugmasi va BottomBar bilan to‘qnashmasligi uchun 70dp margin berilgan
+    -->
+
+    <!-- ➕ Floating Action Button (FAB) — markazda joylashgan katta + tugma -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/home_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/outline_add_24"
+        android:contentDescription="Add Note"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="32dp"
+        app:tint="@color/white"
+        android:backgroundTint="#0ABACF" />
+    <!--
+        - `src` → "+" belgisining rasmi (drawable ichidagi ikonka)
+        - `layout_gravity` → pastga va markazga joylashadi
+        - `backgroundTint` → tugma orqa fon rangi
+        - `tint` → ikonka rangi oq (white)
+    -->
+
+    <!-- ⬇️ BottomAppBar — pastki navigatsiya paneli -->
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/white"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:hideOnScroll="true">
+
+    <!--
+        - `fabCradleMargin` → FAB atrofida bo‘sh joy (oraliq)
+        - `fabCradleRoundedCornerRadius` → pastki bar yumaloqligi
+        - `fabAlignmentMode="center"` → FAB markazga joylashtiriladi
+    -->
+
+        <!-- 🔽 BottomNavigationView — pastdagi 4ta menyu tugmasi -->
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="match_parent"
+app:elevation="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:menu="@menu/bottom_nav_menu"
+            app:itemIconTint="@color/bottom_nav_selector"
+            app:itemTextColor="@color/bottom_nav_selector"
+            app:labelVisibilityMode="labeled" />
+        <!--
+            - `menu` → res/menu/bottom_nav_menu.xml faylidan menyular yuklanadi
+            - `itemIconTint` → ikonka aktiv/passiv ranglar
+            - `itemTextColor` → matn ranglari
+            - `labelVisibilityMode="labeled"` → matn har doim ko‘rsatiladi
+        -->
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <!-- 🔚 BottomAppBar yakunlandi -->
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!-- 🔚 CoordinatorLayout yakunlandi -->

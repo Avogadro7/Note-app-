@@ -1,0 +1,120 @@
+<!-- Har bir note uchun kartochka ko‘rinishi -->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardNote"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:foreground="?attr/selectableItemBackground"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <!-- Ichki tarkib uchun RelativeLayout -->
+    <RelativeLayout
+        android:id="@+id/noteContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <!-- O‘ng yuqorida: Pin, Archive, Favorite iconlari ustma-ust (VerticalLayout) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <!-- Pin belgisi -->
+            <ImageView
+                android:id="@+id/pinIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Pin"
+                android:padding="2dp"
+                android:src="@drawable/ic_pin"
+                card_view:tint="@color/black" />
+
+            <!-- Archive belgisi -->
+            <ImageView
+                android:id="@+id/pin_archive"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="Archive"
+                android:padding="2dp"
+                android:src="@drawable/ic_archive"
+                card_view:tint="@color/black" />
+
+            <!-- Favorite belgisi (yurakcha) -->
+            <ImageView
+                android:id="@+id/favoriteIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:contentDescription="Favorite"
+                android:padding="2dp"
+                android:src="@drawable/ic_favorite_border"
+                card_view:tint="#F40101" />
+        </LinearLayout>
+
+        <!-- Note sarlavhasi (chapda, yuqorida) -->
+        <TextView
+            android:id="@+id/textTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@id/pinIcon"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="1"
+            android:text="Title"
+            android:textColor="@color/title_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="NotSibling" />
+
+        <!-- Note tavsifi -->
+        <TextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/pinIcon"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins"
+            android:maxLines="4"
+            android:text="Description text goes here"
+            android:textColor="@color/desc_color"
+            android:textSize="16sp"
+            tools:ignore="NotSibling" />
+
+        <!-- Kategoriya ko‘rsatiladi (masalan: Work, Study) -->
+        <TextView
+            android:id="@+id/textCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textDescription"
+            android:layout_marginTop="7dp"
+            android:fontFamily="@font/poppins"
+            android:text="Work"
+            android:textColor="@color/time_color"
+            android:textSize="13sp"
+            android:textStyle="italic" />
+
+        <!-- Eslatma vaqti ko‘rsatiladi -->
+        <TextView
+            android:id="@+id/textReminderTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textCategory"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/poppins"
+            android:text="⏰ 12:00"
+            android:textColor="@color/time_color"
+            android:textSize="13sp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

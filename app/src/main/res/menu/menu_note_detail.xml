@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 📌 Eslatmani pinlash uchun menyu tugmasi -->
+    <item
+        android:id="@+id/action_pin"
+        android:icon="@drawable/ic_pin"
+        android:title="Pin"
+        app:showAsAction="ifRoom" /> <!-- Tugma yuqori menyuda joylashadi -->
+
+    <!-- ❤️ Eslatmani favorite (sevimli) sifatida belgilash -->
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite"
+        app:showAsAction="ifRoom" />
+
+    <!-- 🗃️ Eslatmani arxivga joylash -->
+    <item
+        android:id="@+id/action_archive"
+        android:icon="@drawable/ic_archive"
+        android:title="Archive"
+        app:showAsAction="ifRoom" />
+
+    <!-- 📤 Eslatmani baham ko‘rish (Share) -->
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share"
+        android:title="Share"
+        app:showAsAction="ifRoom" />
+
+    <!-- 🗑️ Eslatmani o‘chirish uchun menyu elementi -->
+    <item
+        android:id="@+id/action_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete"
+        app:showAsAction="ifRoom" />
+
+</menu>

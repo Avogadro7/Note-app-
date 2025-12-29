@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Arxivlangan eslatmalarni ko‘rsatish uchun asosiy ScrollView -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:background="#F0F8FF"
+    android:layout_height="match_parent">
+
+    <!-- Sarlavha -->
+    <TextView
+        android:fontFamily="@font/poppins"
+        android:id="@+id/textFavoriteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Arxivlangan eslatmalar"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/title_color"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        />
+
+
+    <ScrollView
+        android:id="@+id/archiveScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0F8FF" >
+        <!-- Eslatmalar ro‘yxati joylashadigan LinearLayout -->
+        <LinearLayout
+            android:id="@+id/archiveRootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <!-- RecyclerView eslatmalarni grid ko‘rinishda ko‘rsatadi -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

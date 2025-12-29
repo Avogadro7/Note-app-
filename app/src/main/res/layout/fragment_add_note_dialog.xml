@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView ichida vertical LinearLayout — forma elementlari pastga qarab joylashadi -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Title kiritish uchun EditText -->
+        <EditText
+            android:id="@+id/editTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Eslatma nomini kiriting"
+            android:inputType="textCapSentences"
+            android:textSize="16sp"
+            android:textColor="@color/title_color"
+            android:textColorHint="#656363"
+            android:backgroundTint="@color/black"
+            android:importantForAutofill="yes"
+            android:fontFamily="@font/poppins" />
+
+        <!-- Description kiritish uchun EditText (ko‘p qatorli) -->
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp"
+            android:hint="Eslatmani yozing"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:textSize="15sp"
+            android:textColor="@color/title_color"
+            android:textColorHint="#656363"
+            android:backgroundTint="@color/black"
+            android:fontFamily="@font/poppins" />
+
+        <!-- Tanlangan reminder vaqtini ko‘rsatadigan TextView -->
+        <TextView
+            android:id="@+id/textReminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Eslatma oʻrnatilmagan"
+            android:textSize="14sp"
+            android:textColor="@color/title_color"
+            android:fontFamily="@font/poppins" />
+
+        <!-- Reminder vaqtini tanlash tugmasi -->
+        <Button
+            android:id="@+id/btnSetReminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Eslatma o'rnatish"
+            android:backgroundTint="#0C8593"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/poppins" />
+
+        <!-- Kategoriya tanlash uchun Spinner -->
+        <Spinner
+
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins" />
+
+        <!-- Rang tanlash sarlavhasi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Note rangini tanlang"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#656363"
+            android:fontFamily="@font/poppins" />
+
+        <!-- Rang variantlarini joylashtirish uchun konteyner (6 dona rang tanlash layouti) -->
+        <LinearLayout
+            android:id="@+id/colorOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <!-- Har biri alohida rang kvadratchasi -->
+            <include layout="@layout/item_color_picker" />
+            <include layout="@layout/item_color_picker" />
+            <include layout="@layout/item_color_picker" />
+            <include layout="@layout/item_color_picker" />
+            <include layout="@layout/item_color_picker" />
+            <include layout="@layout/item_color_picker" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

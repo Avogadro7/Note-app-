@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Profil ekranining asosiy ScrollView konteyneri: sahifadagi barcha elementlarni scroll qilinishiga imkon beradi -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profileFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F8FF"
+    android:padding="16dp">
+
+    <!-- Ichki LinearLayout: barcha elementlar vertikal tarzda joylashadi va markazlashtiriladi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Foydalanuvchi avatar rasmi: doira shaklida, markazda joylashgan -->
+        <ImageView
+            android:id="@+id/imageAvatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/user"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_circle_gray"
+            android:padding="0dp"
+            android:contentDescription="User avatar" />
+
+        <!-- Foydalanuvchi ismi ko‘rsatiladi: katta va qalin shrift bilan -->
+        <TextView
+            android:fontFamily="@font/poppins"
+            android:id="@+id/textUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Name"
+            android:textColor="@color/title_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <!-- Foydalanuvchi emaili: kichikroq shrift bilan ko‘rsatiladi -->
+        <TextView
+            android:fontFamily="@font/poppins"
+            android:id="@+id/textEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="youremail@example.com"
+            android:textColor="@color/desc_color"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Vizual bo‘linuvchi chiziq: elementlarni ajratib turadi -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/light_gray" />
+
+        <!-- Sozlamalar bo‘limining sarlavhasi: qalin va katta shrift bilan -->
+        <TextView
+            android:fontFamily="@font/poppins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sozlamalar"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/title_color" />
+
+        <!-- Dark Mode yoqish/o‘chirish uchun LinearLayout: ichida matn va switch bor -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Dark Mode yozuvi -->
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tungi rejim"
+                android:textSize="14sp"
+                android:textColor="@color/title_color" />
+
+            <!-- Dark Mode uchun Switch tugmasi -->
+            <Switch
+                android:textColor="@color/title_color"
+                android:id="@+id/switchDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Profilni tahrirlash elementi (LinearLayout): matn va tahrirlash ikonkasi bilan -->
+        <LinearLayout
+            android:id="@+id/itemEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Edit Profile matni -->
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Profilni tahrirlash"
+                android:textSize="14sp"
+                android:textColor="@color/title_color" />
+
+            <!-- Edit ikonkasi -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_edit1"
+                app:tint="@color/gray" />
+        </LinearLayout>
+
+        <!-- Tilni o‘zgartirish elementi (LinearLayout): matn va til ikonkasi bilan -->
+        <LinearLayout
+            android:id="@+id/itemChangeLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Change Language matni -->
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Tilni o'zgartirish"
+                android:textSize="14sp"
+                android:textColor="@color/title_color" />
+
+            <!-- Til ikonkasi -->
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_language"
+                app:tint="@color/gray" />
+        </LinearLayout>
+
+        <!-- Ilova versiyasi ko‘rsatiladigan LinearLayout: matn va versiya raqami bilan -->
+        <LinearLayout
+            android:id="@+id/itemVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingVertical="12dp">
+
+            <!-- App Version yozuvi -->
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ilova versiyasi"
+                android:textSize="14sp"
+                android:textColor="@color/title_color" />
+
+            <!-- Versiya raqami ko‘rsatiladigan TextView -->
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:id="@+id/textVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="v2.0"
+                android:textColor="@color/desc_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Chiqish (Logout) tugmasi: butun kenglikni egallaydi, rangli fon va oq matn bilan -->
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_search_view"
+            android:text="Profildan chiqish"
+            app:backgroundTint="@color/my_button_color"
+            app:cornerRadius="16dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:rippleColor="@color/white"
+            app:strokeColor="@color/white"
+        />
+
+    </LinearLayout>
+</ScrollView>
