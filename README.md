@@ -80,14 +80,19 @@ We forget many things every day. But with this app, you don't have to remember �
 - **Language:** Kotlin
 - **Platform:** Android
 - **IDE:** Android Studio
-- **Minimum SDK:** 21
-- **Target SDK:** 34
+- **Minimum SDK:** 24 (Android 7.0)
+- **Target SDK:** 34 (Android 14)
 
 ---
 
 ## 📸 Screenshots
 
-[Add your app screenshots here]
+<p align="center">
+  <img src="screenshots/Screenshot 2025-12-29 210120.png" width="200" alt="Add Reminder" />
+  <img src="screenshots/Screenshot 2025-12-29 210200.png" width="200" alt="Home Screen" />
+  <img src="screenshots/Screenshot 2025-12-29 210237.png" width="200" alt="Archive" />
+  <img src="screenshots/Screenshot 2025-12-29 210251.png" width="200" alt="Favorites" />
+</p>
 
 ---
 
@@ -108,7 +113,7 @@ git clone https://github.com/Avogadro7/todo-app.git
 
 ## 📝 License
 
-[Choose your license - MIT, Apache 2.0, etc.]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
