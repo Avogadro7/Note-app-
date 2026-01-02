@@ -87,13 +87,12 @@ We forget many things every day. But with this app, you don't have to remember â
 
 ## ðŸ“¸ Screenshots
 
-![Add Reminder](screenshots/screenshot_1.png)
-![Home Screen](screenshots/screenshot_2.png)
-![Archive](screenshots/screenshot_3.png)
-![Favorites](screenshots/screenshot_4.png)
-![Extra](screenshots/screenshot_5.png)
-![Extra](screenshots/screenshot_6.png)
-
+![Screenshot 1](https://raw.githubusercontent.com/Avogadro7/todo-app/main/screenshots/screenshot_1.png)
+![Screenshot 2](https://raw.githubusercontent.com/Avogadro7/todo-app/main/screenshots/screenshot_2.png)
+![Screenshot 3](https://raw.githubusercontent.com/Avogadro7/todo-app/main/screenshots/screenshot_3.png)
+![Screenshot 4](https://raw.githubusercontent.com/Avogadro7/todo-app/main/screenshots/screenshot_4.png)
+![Screenshot 5](https://raw.githubusercontent.com/Avogadro7/todo-app/main/screenshots/screenshot_5.png)
+![Screenshot 6](https://raw.githubusercontent.com/Avogadro7/todo-app/main/screenshots/screenshot_6.png)
 
 
 ---
