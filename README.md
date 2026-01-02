@@ -80,8 +80,8 @@ We forget many things every day. But with this app, you don't have to remember â
 - **Language:** Kotlin
 - **Platform:** Android
 - **IDE:** Android Studio
-- **Minimum SDK:** [Your min SDK]
-- **Target SDK:** [Your target SDK]
+- **Minimum SDK:** 21
+- **Target SDK:** 34
 
 ---
 
