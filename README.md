@@ -88,12 +88,12 @@ We forget many things every day. But with this app, you don't have to remember â
 ## ðŸ“¸ Screenshots
 
 <p align="center">
-  <img src="Screenshot 2025-12-29 210120.png" width="200" alt="Add Reminder" />
-  <img src="Screenshot 2025-12-29 210200.png" width="200" alt="Home Screen" />
-  <img src="Screenshot 2025-12-29 210237.png" width="200" alt="Archive" />
-  <img src="Screenshot 2025-12-29 210251.png" width="200" alt="Favorites" />
-  <img src="Screenshot 2025-12-29 210259.png" width="200" alt="Profile" />
-  <img src="Screenshot 2025-12-29 210308.png" width="200" alt="Settings" />
+  <img src="screenshots/Screenshot 2025-12-29 210120.png" width="200" alt="Add Reminder" />
+  <img src="screenshots/Screenshot 2025-12-29 210200.png" width="200" alt="Home Screen" />
+  <img src="screenshots/Screenshot 2025-12-29 210237.png" width="200" alt="Archive" />
+  <img src="screenshots/Screenshot 2025-12-29 210251.png" width="200" alt="Favorites" />
+  <img src="screenshots/Screenshot 2025-12-29 210259.png" width="200" alt="Profile" />
+  <img src="screenshots/Screenshot 2025-12-29 210308.png" width="200" alt="Settings" />
 </p>
 
 ---
